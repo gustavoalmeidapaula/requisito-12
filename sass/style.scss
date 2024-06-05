@@ -1,7 +1,7 @@
 $font-family: 'Ubuntu', sans-serif;
 $spacing-unit: 10px;
 
-//* Colors
+// Colors
 $primary-color: #341f0a;
 $secundary-color: #FFDFC0;
 $font-color: #ffffff;
@@ -10,7 +10,6 @@ $light-bg: #FFDFC0;
 $light-text: #341f0a;
 $dark-bg: #341f0a;
 $dark-text: #ffffff;
-//*********
 
 * {
     margin: 0;
@@ -19,7 +18,7 @@ $dark-text: #ffffff;
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $font-family;
     transition: background-color 0.3s, color 0.3s;
 
     &[data-theme='light'] {
@@ -32,7 +31,6 @@ body {
         color: $dark-text;
     }
 }
-
 
 @mixin button-style {
     background-color: blue;
@@ -47,23 +45,47 @@ nav {
     background-color: $primary-color;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     font-size: 30px;
-}
 
-.menu-principal {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+    .menu-principal {
+        list-style: none;
+        display: flex;
 
-.menu-principal {
-    li {
-        margin-right: 20px;
+        li {
+            margin-right: 20px;
+            position: relative;
+
+            .submenu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                position: absolute;
+                display: none;
+                border-radius: 15px;
+                background-color: $primary-color;
+                z-index: 1;
+
+                li {
+                    padding: 8px 12px;
+                }
+
+                a {
+                    color: $font-color;
+                    display: block;
+                }
+            }
+
+            &:hover .submenu {
+                display: block;
+                opacity: 1;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
     }
-}
 
-.menu-principal{    
     a {
         text-decoration: none;
         color: $font-color;
@@ -72,47 +94,9 @@ nav {
         margin-bottom: 15px;
         display: block;
     }
-}
 
-.submenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    position: absolute;
-    display: none;
-    border-radius: 15px;
-    background-color: $primary-color;
-    z-index: 1;
-}
-
-.submenu {
-    li {
-        padding: 8px 12px;
-    }
-}
-
-.submenu {
-    a {
-        color: $font-color;
-        display: block;
-    }
-}
-
-.menu-principal{
-    li:hover .submenu {
-        display: block;
-    }
-}    
-    
-.submenu {
-    transition: opacity 1.5s ease-in-out;
-    opacity: 0;
-}
-
-.menu-principal {
-    li:hover .submenu {
-        opacity: 5;
+    button {
+        @include button-style;
     }
 }
 
@@ -126,19 +110,19 @@ nav {
             width: 100%;
             display: none;
 
+            &.show {
+                display: flex;
+            }
+
             li {
                 width: 100%;
-            }
 
-            .submenu {
-                position: relative;
-                top: auto;
-                left: auto;
+                .submenu {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
             }
-        }
-
-        .menu-principal.show {
-            display: flex;
         }
 
         button {
@@ -164,18 +148,17 @@ nav {
     font-size: 50px;
     align-items: center;
     justify-content: center;
-    
 }
 
 #bem-vindo {
-        background-color: $primary-color;
-        color: $font-color;
-        margin-top: 150px;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    background-color: $primary-color;
+    color: $font-color;
+    margin-top: 150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .logo-proj {
@@ -186,6 +169,6 @@ nav {
 
 h2 {
     font-size: 35px;
-    margin-top:50px;
+    margin-top: 50px;
     margin-bottom: -80px;
 }
