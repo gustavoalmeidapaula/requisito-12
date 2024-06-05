@@ -10,8 +10,10 @@ $light-bg: #FFDFC0;
 $light-text: #341f0a;
 $dark-bg: #341f0a;
 $dark-text: #ffffff;
+//*********
 
 body {
+    background-color: $light-bg;
     transition: background-color 0.3s, color 0.3s;
 
     &.light-theme {
@@ -31,9 +33,6 @@ body {
     font-family: $font-family;
 }
 
-body {
-    background-color: $secundary-color;
-}
 
 @mixin button-style {
     background-color: blue;
