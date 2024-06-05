@@ -154,13 +154,16 @@ h2 {
     margin-bottom: -80px;
 }
 
-
-
-button:hover {
+button {
     background-color: $secundary-color;
     color: $primary-color;
+}
+
+button:hover {
+    background-color: $primary-color;
+    color: $font-color;
     transform: scale(1.1);
-    border: $primary-color double 5px;
+    border: $secundary-color double 5px;
 }
 
 #themeSwitcher {
