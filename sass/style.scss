@@ -6,6 +6,25 @@ $primary-color: #341f0a;
 $secundary-color: #FFDFC0;
 $font-color: #ffffff;
 
+$light-bg: #FFDFC0;
+$light-text: #341f0a;
+$dark-bg: #341f0a;
+$dark-text: #ffffff;
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+
+    &.light-theme {
+        background-color: $light-bg;
+        color: $light-text;
+    }
+
+    &.dark-theme {
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -152,30 +171,4 @@ h2 {
     font-size: 35px;
     margin-top:50px;
     margin-bottom: -80px;
-}
-
-button {
-    background-color: $secundary-color;
-    color: $primary-color;
-}
-
-button:hover {
-    background-color: $primary-color;
-    color: $font-color;
-    transform: scale(1.1);
-    border: $secundary-color double 5px;
-}
-
-#themeSwitcher {
-    background-color: $secundary-color;
-    color: $primary-color;
-    transition: .15s;
-    cursor:pointer;
-}
-    
-
-#themeSwitcher:hover {
-    background-color: $primary-color;
-    color: $secundary-color;
-    transform: scale(1.1);
 }
