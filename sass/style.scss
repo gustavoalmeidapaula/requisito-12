@@ -167,15 +167,15 @@ button:hover {
 }
 
 #themeSwitcher {
-    background-color: $primary-color;
-    color: $secundary-color;
+    background-color: $secundary-color;
+    color: $primary-color;
     transition: .15s;
     cursor:pointer;
 }
     
 
 #themeSwitcher:hover {
-    background-color: $secundary-color;
-    color: $primary-color;
+    background-color: $primary-color;
+    color: $secundary-color;
     transform: scale(1.1);
 }
