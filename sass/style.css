@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #FFDFC0;
+}
+
+nav {
+  background-color: #341f0a;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.menu-principal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-principal li {
+  margin-right: 20px;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  position: absolute;
+  display: none;
+  border-radius: 15px;
+  background-color: #341f0a;
+  z-index: 1;
+}
+
+.submenu li {
+  padding: 8px 12px;
+}
+
+.submenu a {
+  color: #ffffff;
+  display: block;
+}
+
+.menu-principal li:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.menu-principal li:hover .submenu {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .menu-principal {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-principal li {
+    margin-bottom: 10px;
+  }
+  .submenu {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}
+.brasil {
+  padding: 5px;
+  width: 120px;
+  display: flex;
+}
+
+#pag-const {
+  color: grey;
+  display: flex;
+  margin-top: 150px;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#bem-vindo {
+  background-color: #341f0a;
+  color: #ffffff;
+  margin-top: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-proj {
+  margin-top: 0px;
+  width: 300px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 35px;
+  margin-top: 50px;
+  margin-bottom: -80px;
+}
+
+button:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  transform: scale(1.1);
+  border: var(--primary-color) double 5px;
+}
+
+#themeSwitcher {
+  background-color: rgb(255, 217, 185);
+  color: #341f0a;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+#themeSwitcher:hover {
+  background-color: rgb(255, 217, 185);
+  color: #341f0a;
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
