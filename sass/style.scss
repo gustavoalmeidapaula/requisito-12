@@ -48,7 +48,7 @@ nav {
 .menu-principal{    
     a {
         text-decoration: none;
-        color: #ffffff;
+        color: $font-color;
         font-weight: bold;
         padding: 8px 12px;
         margin-bottom: 15px;
@@ -76,7 +76,7 @@ nav {
 
 .submenu {
     a {
-        color: #ffffff;
+        color: $font-color;
         display: block;
     }
 }
@@ -132,8 +132,8 @@ nav {
 }
 
 #bem-vindo {
-        background-color: #341f0a;
-        color: #ffffff;
+        background-color: $primary-color;
+        color: $font-color;
         margin-top: 150px;
         padding: 20px;
         display: flex;
@@ -157,22 +157,22 @@ h2 {
 
 
 button:hover {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
+    background-color: $secundary-color;
+    color: $primary-color;
     transform: scale(1.1);
-    border: var(--primary-color) double 5px;
+    border: $primary-color double 5px;
 }
 
 #themeSwitcher {
-    background-color: rgb(255, 217, 185);
-    color: #341f0a;
+    background-color: $primary-color;
+    color: $secundary-color;
     transition: .15s;
     cursor:pointer;
 }
     
 
 #themeSwitcher:hover {
-    background-color: rgb(255, 217, 185);
-    color: #341f0a;
+    background-color: $secundary-color;
+    color: $primary-color;
     transform: scale(1.1);
 }

@@ -1,18 +1,17 @@
 const button = document.getElementById('button')
 const main = document.querySelector('main')
-const root = document.querySelector(':root')
 const theme = document.getElementById('themeSwitcher')
 
 theme.addEventListener('click', function () {
     if (main.dataset.theme === 'dark') {
-        root.style.setProperty('--bg-color', '#f1f5f9')
-        root.style.setProperty('--font-color', '#212529')
-        root.style.setProperty('--primary-color', '#212529')
+        root.style.setProperty('$secundary-color', '#FFDFC0')
+        root.style.setProperty('$font-color', '#341f0a')
+        root.style.setProperty('$primary-color', '##ffffff')
         main.dataset.theme = 'light'
     } else {
-        root.style.setProperty('--bg-color', '#212529')
-        root.style.setProperty('--font-color', '#f1f5f9')
-        root.style.setProperty('--primary-color', '#4dff91')
+        root.style.setProperty('$secundary-color', '#ffffff')
+        root.style.setProperty('$font-color', '#FFDFC0')
+        root.style.setProperty('$primary-color', '#341f0a')
         main.dataset.theme = 'dark'
     }
 })
